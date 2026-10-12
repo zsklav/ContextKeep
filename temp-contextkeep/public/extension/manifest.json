@@ -1,0 +1,16 @@
+
+{
+  "manifest_version": 3,
+  "name": "ContextKeep",
+  "version": "0.1.0",
+  "description": "Save and rediscover valuable answers from AI conversations.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["https://chatgpt.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
